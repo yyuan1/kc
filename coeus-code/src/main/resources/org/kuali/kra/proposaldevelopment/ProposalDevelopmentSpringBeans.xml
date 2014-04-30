@@ -59,6 +59,7 @@
                 <value>classpath:org/kuali/coeus/propdev/impl/attachment/ProposalAttachmentsPage.xml</value>
                 <value>classpath:org/kuali/coeus/propdev/impl/core/ProposalCommon.xml</value>
                 <value>classpath:org/kuali/coeus/propdev/impl/specialreview/ProposalCompliancePage.xml</value>
+                <value>classpath:org/kuali/coeus/propdev/impl/copy/ProposalCopySection.xml</value>
                 <value>classpath:org/kuali/coeus/propdev/impl/core/ProposalDetailsPage.xml</value>
                 <value>classpath:org/kuali/coeus/propdev/impl/core/ProposalDocumentView.xml</value>
                 <value>classpath:org/kuali/coeus/propdev/impl/core/ProposalInitiatePage.xml</value>

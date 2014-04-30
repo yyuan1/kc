@@ -16,6 +16,7 @@
 package org.kuali.coeus.propdev.impl.core;
 
 import org.apache.commons.lang3.StringUtils;
+import org.kuali.coeus.propdev.impl.copy.ProposalCopyCriteria;
 import org.kuali.coeus.propdev.impl.question.ProposalDevelopmentQuestionnaireHelper;
 import org.kuali.coeus.propdev.impl.specialreview.SpecialReviewHelper;
 import org.kuali.coeus.propdev.impl.person.KeyPersonnelAddWizardHelper;
@@ -36,7 +37,8 @@ public class ProposalDevelopmentDocumentForm extends TransactionalDocumentFormBa
     private ProposalDevelopmentQuestionnaireHelper questionnaireHelper;
     private KeyPersonnelAddWizardHelper addKeyPersonHelper;
     private S2sOpportunity newS2sOpportunity;
-    
+    private ProposalCopyCriteria proposalCopyCriteria;
+
     public ProposalDevelopmentDocumentForm() {
         super();
     }
@@ -50,6 +52,8 @@ public class ProposalDevelopmentDocumentForm extends TransactionalDocumentFormBa
         addKeyPersonHelper = new KeyPersonnelAddWizardHelper();
         
         newS2sOpportunity = new S2sOpportunity();
+
+        proposalCopyCriteria = new ProposalCopyCriteria(getProposalDevelopmentDocument());
     }
     
     public int findIndexOfPageId(List<Action> actions) {
@@ -135,5 +139,8 @@ public class ProposalDevelopmentDocumentForm extends TransactionalDocumentFormBa
     public void setNewS2sOpportunity(S2sOpportunity newOpportunity) {
         this.newS2sOpportunity = newOpportunity;
     }
+
+    public ProposalCopyCriteria getProposalCopyCriteria (){return proposalCopyCriteria;}
+    public void setProposalCopyCriteria (ProposalCopyCriteria proposalCopyCriteria){this.proposalCopyCriteria = proposalCopyCriteria;}
 
 }
